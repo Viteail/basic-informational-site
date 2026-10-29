@@ -1,9 +1,20 @@
 {
   "devDependencies": {
-    "@types/node": "^26.6.5"
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
   },
   "type": "module",
   "scripts": {
-    "start": "node --watch server.ts"
+    "dev": "tsx watch server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
